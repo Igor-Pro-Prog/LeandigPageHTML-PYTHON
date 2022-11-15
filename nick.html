@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html lang='pt'>
+    <head>
+        <title> Gerador de Nick</title>
+
+        <link rel = "stylesheet" href = "https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,900&display=swap">
+        <link rel = "stylesheet" href = "https://pyscript.net/alpha/pyscript.css" />
+        <link rel="stylesheet" href = "aplic.css">
+        <script defer src = "https://pyscript.net/alpha/pyscript.js"></script>
+
+    </head>
+    <body>
+        <img src="Nick.png" alt="Imagem nick">
+        <h1>Gere seu Nick Gratis</h1>
+        <h2>Script Gerador de Nick que nunca se repete</h2>
+        <p>Com o nosso script você vai conseguir Gerar seu NICK</p>
+<h2> seu nick é 
+    <py-script>
+        import random
+        import string
+        def randomNick():
+            return ''.join(random.choice(string.ascii_uppercase + string.digits) for _ in range(7))
+        print(randomNick())
+</body>
+</html>

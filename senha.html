@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html lang='pt'>
+    <head>
+        <title> Gerador de Senha</title>
+
+        <link rel = "stylesheet" href = "https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,900&display=swap">
+        <link rel = "stylesheet" href = "https://pyscript.net/alpha/pyscript.css" />
+        <link rel="stylesheet" href = "aplic.css">
+        <script defer src = "https://pyscript.net/alpha/pyscript.js"></script>
+
+    </head>
+    <body>
+        <img src="#" alt="#">
+        <h1>Gere sua Senha</h1>
+        <h2>Script Gerador de SENHA que nunca se repete</h2>
+        <p>Com o nosso script você vai conseguir Gerar sua SENHA</p>
+<h2> sua Senha é 
+    <py-script>
+        import random
+        import string
+
+        def gerar_senha(tamanho):
+             caracteres = string.ascii_letters + string.digits + string.punctuation
+             senha = ''.join(random.choice(caracteres) for x in range(tamanho))
+             return senha
+        tamanho = int(input('Digite o tamanho da senha: '))
+        
+
+
+        senha = gerar_senha(tamanho)
+        print('Sua senha é: ', senha)
+</body>
+</html>
